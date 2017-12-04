@@ -2,7 +2,7 @@
 # Data is obtained from Sylvia Cox as Spreadsheets for 6 month increments.
 # Need to investigate how this data is prepared so that I can determine a better path forward for automating the data processing for these metrics.
 
-setwd("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users")
+setwd("~/Box/Fastrak Users")
 # setwd("~/Documents/Projects/Fastrak Users")
 library(readxl)
 library(dplyr)
@@ -20,37 +20,37 @@ library(anytime)
 rm(ForSummary)
 
 # Read in Data for 2015
-x2015_Jul <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-JUL")
-x2015_Aug <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-AUG")
-x2015_Sep <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Sep")
-x2015_Oct <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Oct")
-x2015_Nov <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Nov")
-x2015_Dec <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Dec")
+x2015_Jul <- read_excel("~/Box/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-JUL")
+x2015_Aug <- read_excel("~/Box/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-AUG")
+x2015_Sep <- read_excel("~/Box/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Sep")
+x2015_Oct <- read_excel("~/Box/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Oct")
+x2015_Nov <- read_excel("~/Box/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Nov")
+x2015_Dec <- read_excel("~/Box/Fastrak Users/unprocessed/2015_Jul-Dec.xlsx", sheet = "2015-Dec")
 
 # Read in Data for 2016
-x2016_Jan <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-JAN")
-x2016_Feb <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-FEB")
-x2016_Mar <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-Mar")
-x2016_Apr <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-Apr")
-x2016_May <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-May")
-x2016_Jun <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-Jun")
+x2016_Jan <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-JAN")
+x2016_Feb <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-FEB")
+x2016_Mar <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-Mar")
+x2016_Apr <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-Apr")
+x2016_May <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-May")
+x2016_Jun <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jan-Jun.xlsx", sheet = "2016-Jun")
 
-x2016_Jul <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jul-Sep.xlsx", sheet = "2016-Jul")
-x2016_Aug <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jul-Sep.xlsx", sheet = "2016-Aug")
-x2016_Sep <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Jul-Sep.xlsx", sheet = "2016-Sep")
-x2016_Oct <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Oct-Dec.xlsx", sheet = "2016-Oct")
-x2016_Nov <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Oct-Dec.xlsx", sheet = "2016-Nov")
-x2016_Dec <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2016_Oct-Dec.xlsx", sheet = "2016-Dec")
+x2016_Jul <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jul-Sep.xlsx", sheet = "2016-Jul")
+x2016_Aug <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jul-Sep.xlsx", sheet = "2016-Aug")
+x2016_Sep <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Jul-Sep.xlsx", sheet = "2016-Sep")
+x2016_Oct <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Oct-Dec.xlsx", sheet = "2016-Oct")
+x2016_Nov <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Oct-Dec.xlsx", sheet = "2016-Nov")
+x2016_Dec <- read_excel("~/Box/Fastrak Users/unprocessed/2016_Oct-Dec.xlsx", sheet = "2016-Dec")
 #Fix Columns
 x2016_Dec <- x2016_Dec[1:5]
 
 #Read Data for 2017
-x2017_Jan <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2017_Jan-Mar.xlsx", sheet = "2017-Jan")
-x2017_Feb <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2017_Jan-Mar.xlsx", sheet = "2017-Feb")
-x2017_Mar <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2017_Jan-Mar.xlsx", sheet = "2017-Mar")
-x2017_Apr <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2017_Apr-Jun.xlsx", sheet = "2017-Apr")
-x2017_May <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2017_Apr-Jun.xlsx", sheet = "2017-May")
-x2017_Jun <- read_excel("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/unprocessed/2017_Apr-Jun.xlsx", sheet = "2017-Jun")
+x2017_Jan <- read_excel("~/Box/Fastrak Users/unprocessed/2017_Jan-Mar.xlsx", sheet = "2017-Jan")
+x2017_Feb <- read_excel("~/Box/Fastrak Users/unprocessed/2017_Jan-Mar.xlsx", sheet = "2017-Feb")
+x2017_Mar <- read_excel("~/Box/Fastrak Users/unprocessed/2017_Jan-Mar.xlsx", sheet = "2017-Mar")
+x2017_Apr <- read_excel("~/Box/Fastrak Users/unprocessed/2017_Apr-Jun.xlsx", sheet = "2017-Apr")
+x2017_May <- read_excel("~/Box/Fastrak Users/unprocessed/2017_Apr-Jun.xlsx", sheet = "2017-May")
+x2017_Jun <- read_excel("~/Box/Fastrak Users/unprocessed/2017_Apr-Jun.xlsx", sheet = "2017-Jun")
 
 BridgeTransactions <- rbind(x2015_Jul,
                             x2015_Aug,
@@ -95,10 +95,16 @@ brbad <- subset(BridgeTransactions, is.na(xMonth))
 brgood <- subset(BridgeTransactions, !is.na(xMonth)) 
 brbad$TxnDate <- as.character(structure(brbad$TxnDate, class = c("POSIXct", "POSIXt")))
 brbad<- separate(brbad, TxnDate, c("yr", "mon", "dy"), sep="-", remove = FALSE, convert = TRUE)
+brbad$dy <- substr(brbad$dy,1,2)
 brbad$xYear <- brbad$yr
-brbad$xMonth <- brbad$mon
-brbad$xDay <- brbad$dy
+brbad$xMonth <-brbad$mon
+brbad$xDay <- as.integer(brbad$dy)
+brbad$TxnDate <- as.Date( paste(brbad$xYear, brbad$xMonth, brbad$xDay  ,   sep = "-" )  , format = "%Y-%m-%d" )
 brbad <- brbad[,-c(2,3,4)]
+
+brgood$xMonth <- match(brgood$xMonth,month.abb)
+brgood$xDay <- as.integer(brgood$xDay)
+brgood$TxnDate <-as.Date( paste(brgood$xYear, brgood$xMonth,brgood$xDay  ,   sep = "-" )  , format = "%Y-%m-%d" )
 BridgeTransactions <- rbind(brbad, brgood)
 
 # Remove uneeded DFs
@@ -158,25 +164,6 @@ BridgeTransactions$Bridge[BridgeTransactions$PlazaID == 7] <- "Carquinez Bridge"
 BridgeTransactions$Bridge[BridgeTransactions$PlazaID == 8] <- "Benicia Martinez Bridge"
 BridgeTransactions$Bridge[BridgeTransactions$PlazaID == 49] <- "Golden Gate Bridge"
 
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '7'] <- "Jul"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '8'] <- "Aug"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '9'] <- "Sep"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '10'] <- "Oct"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '11'] <- "Nov"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '12'] <- "Dec"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '1'] <- "Jan"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '2'] <- "Feb"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '3'] <- "Mar"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '4'] <- "Apr"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '5'] <- "May"
-BridgeTransactions$xMonth[BridgeTransactions$xMonth == '6'] <- "Jun"
-
-#Update TxnDate with unite for Year - Month - Day
-BridgeTransactions <- unite(BridgeTransactions, CleanDate, xYear, xMonth, xDay, sep = "-", remove = FALSE)
-BridgeTransactions$TxnDate <- BridgeTransactions$CleanDate
-BridgeTransactions <- BridgeTransactions[,-c(2)]
-BridgeTransactions$TxnDate <- as.character(BridgeTransactions$TxnDate)
-
 
 # Same as Reduce Function
 #Total Transactions are 1646462
@@ -185,10 +172,6 @@ rm(BridgeTransactions)
 rm(br2, badrecords, br, brbad, brgood)
 # Select only zipcode records from California
 CaliforniaTransactions <- sqldf("select xDay, xMonth, xYear, TxnDate, Bridge, PlazaAgency, POSTCODE, Count, 'Unclassified' as NAME, County from TransactionsByBridgeByZipByCounty Order by TxnDate, Bridge, PlazaAgency, POSTCODE, Count, County")
-
-# Fix Date field values
-CaliforniaTransactions %>%
-  mutate(TxnDate = ifelse(is.na(TxnDate), paste(xYear, xMonth, xDay, sep = "-", collapse = NULL))) -> CaliforniaTransactions
 
 
 #In Region
@@ -211,16 +194,21 @@ OutRegion$NAME <- "Out of Region"
 ForSummary <- rbind(InRegion, OutRegion)
 
 ForSummary <- sqldf("select xYear, xMonth, XDay, TxnDate, Bridge, PlazaAgency, POSTCODE, Count, NAME, County as CountyFIP from ForSummary")
-ForSummary %>%
-  mutate(TxnDate =  paste(xYear, xMonth, xDay, sep = "-", collapse = NULL)) -> ForSummary
+
+###add FY 
+
+ForSummary <- ForSummary %>%
+  mutate(FY = case_when(TxnDate >= as.Date("2015-07-01") & TxnDate < as.Date("2016-07-01")~ "FY 15/16",
+                         TxnDate >= as.Date("2016-07-01") & TxnDate < as.Date("2017-07-01")~ "FY 16/17"))%>%
+  mutate(xWeekday = weekdays(as.Date(TxnDate)))
 
 
 #Cleanup Data
 rm(InRegion,OutRegion,TransactionsByBridgeByZipByCounty,CaliforniaTransactions,ca_zips)
 
 # Export Summary
-setwd("~/Box/DataViz Projects/Data Analysis and Visualization/Fastrak Users/processed/")
-write.csv(ForSummary, file="ForSummary.csv")
+setwd("~/Box/Fastrak Users/processed/")
+write.csv(ForSummary, file="FT_trans_by_month.csv")
 
 SummaryByBridgeByZipByCounty <- aggregate(list(ForSummary$Count), by = list(ForSummary$NAME, ForSummary$POSTCODE, ForSummary$Bridge), sum)
 names(SummaryByBridgeByZipByCounty) <- c("County","ZipCode","Bridge","TotalTransactions")
