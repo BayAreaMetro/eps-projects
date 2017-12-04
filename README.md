@@ -4,5 +4,5 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 
 ## Authors
 
-* Danai Avergerinou - \href{https://www.linkedin.com/in/danai-avgerinou/}{LinkedIn} 
-* Shannon McNish - \href{https://www.linkedin.com/in/shannon-mcnish-a8b01871/}{LinkedIn} 
+* Danai Avergerinou - [LinkedIn](https://www.linkedin.com/in/danai-avgerinou/)
+* Shannon McNish - [LinkedIn](https://www.linkedin.com/in/shannon-mcnish-a8b01871/)
