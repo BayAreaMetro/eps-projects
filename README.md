@@ -4,7 +4,7 @@
 This repo contains documentation of the work done for the MTC-USF practicum during the 2017-2018 school year. The practicum is a 9-month program in which two students from the Masters in Analytics program at USF work with MTC to use data to provide recommendations and inform business decisions. 
 
 
-#Authors
+## Authors
 
 * Danai Avergerinou - \href{https://www.linkedin.com/in/danai-avgerinou/}{LinkedIn} 
 * Shannon McNish - \href{https://www.linkedin.com/in/shannon-mcnish-a8b01871/}{LinkedIn} 
