@@ -19,9 +19,9 @@ The black line represents the total Clipper users for each operator for a Novemb
 * On the other hand, Napa Solano is just as far here and we see high interaction with BART
 
 
-**insert screenshot with BART dropdown selected here**
+![alt text](https://github.com/BayAreaMetro/usf-practicum/blob/master/images/Overlap_BART_selected.png)
 
-**insert screenshot with Muni dropdown selected here**
+![alt text](https://github.com/BayAreaMetro/usf-practicum/blob/master/images/Overlap_Muni_selected.png)
 
 
 
