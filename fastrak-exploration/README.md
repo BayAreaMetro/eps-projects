@@ -4,7 +4,7 @@ The purpose of this directory is to house all scripts related to Fastrak data cl
 
 ## Contents 
 
-1. [Summary of bridge transactions](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-exploration/README.md) - This scripts takes aggregated bridge transactions report from July 2015 to June 2017 and cleans data in preparation for analysis. Data cleaning processes include:
+1. [Summary of bridge transactions](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-exploration/README.md) - This scripts takes monthly aggregated bridge transactions reports from July 2015 to June 2017 and cleans data in preparation for analysis. Data cleaning processes include:
 	* Aggregating disparate reports
 	* Fixing dates
 	* Attaching bridge name to bridge ID
