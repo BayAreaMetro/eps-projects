@@ -1,6 +1,6 @@
-# Fastrak Exploration
+# FasTrak Exploration
 
-The purpose of this directory is to house all scripts related to Fastrak data cleaning and analysis.
+The purpose of this directory is to house all scripts related to FasTrak data cleaning and analysis.
 
 ## Contents 
 
