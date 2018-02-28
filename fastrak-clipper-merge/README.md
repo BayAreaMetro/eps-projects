@@ -14,6 +14,7 @@ The purpose of this project is to merge Clipper and FasTrak account datasets. By
 
 	* fastrak_.csv
 	* clipper_.csv
+    
     *Output* - Anonymized FasTrak and Clipper Account data and file containing anonymized labels for missing values
 
 	* anonym_fastrak.csv
