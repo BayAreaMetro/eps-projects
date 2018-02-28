@@ -19,7 +19,7 @@ The purpose of this project is to merge Clipper and FasTrak account datasets. By
 
     * anonym_fastrak.csv
     * anonym_clipper.csv
-    * missing.csv
+    * missing.csv  
 
 
     2. [Merge script](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/merging_anonymized_data.py) - This script merges Clipper and FasTrak anonymized account data in an iterative process.
