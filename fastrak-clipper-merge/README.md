@@ -20,5 +20,15 @@ This script uses a technique called Label Encoding to anonymize the desired colu
 	* anonym_clipper.csv
 	* missing.csv
 
-2. [Merge script](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/merging_anonymized_data.py) - This script merges Clipper and FasTrak anonymized account data in an iterative process.
+2. [Merge script](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/merging_anonymized_data.py) - This script merges Clipper and FasTrak anonymized account data in an iterative process, making a series of matches using different subsets of columns. This approach was chosen because it is reliable, only making matches when there is one record in each dataset with the stated match criteria. Additionally, by iterating over different subsets of columns, this method picks up matches that has one column misspelled but otherwise has all records matching. 
+
+### Technique
+For each level of merge, the match works as follows:
+
+1. Specify a subset of columns on which to match Clipper and FasTrak Account data
+2. Subset each dataset by taking only the rows that have unique values for each identified column in this match level.
+3. Match between datasets if all values for the specified columns are equal.
+
+
+
 
