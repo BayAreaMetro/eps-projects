@@ -1,5 +1,5 @@
+## Table of Results
 
-                         Table of Results
 | Levels                                                                      | Number of Matches |
 |----------------------------------------------------------|------------------------|
 | First Name , Last Name, Address, City, Zip            | 136,556                    |
