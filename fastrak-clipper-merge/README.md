@@ -53,6 +53,10 @@ The purpose of this project is to merge Clipper and FasTrak account datasets. By
    *  This code also does a clean-up on city misspellings by creating a dictionary that matches each unique city in the FasTrak and Clipper data sets to the correct city spelling. It does this by checking word similarly between each city on our data to the population of cities in CA (obtained from outside [data source](https://github.com/grammakov/USA-cities-and-states)) and returns the correctly-spelled city.
    
 
+## Results
+The results from the first merge are found [here](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/Results.md)
+   
+
 
 
 
