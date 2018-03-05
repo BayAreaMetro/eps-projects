@@ -15,15 +15,17 @@ The purpose of this project is to merge Clipper and FasTrak account datasets. By
     * fastrak_.csv
     * clipper_.csv
     
-    *Output* - Anonymized FasTrak and Clipper Account data and file containing anonymized labels for missing values
+    *Output* - Anonymized FasTrak and Clipper Account data, files to link fake and real Account IDs for Clipper and FasTrak, and file containing anonymized labels for missing values
 
     * anonym_fastrak.csv
     * anonym_clipper.csv
+    * fastrak_account_fakeID.csv
+    * clipper_account_fakeID.csv
     * missing.csv  
     
      ### Notes
      
-     * This script adds an anonymized Clipper and Fastrak Account ID (called Record_id_c and Record_id_f) since this information is considered PII. The link between the real and fake account ID's is crucial for identifying the users with both FasTrak and Clipper accounts on the transactions data. 
+     * This script adds an anonymized Clipper and Fastrak Account ID (called Record_id_c and Record_id_f) since this information is considered PII. The link between the real and fake account ID's is crucial for identifying the users with both FasTrak and Clipper accounts on the transactions data. This link is exported in the files fastrak_account_fakeID.csv and clipper_account_fakeID.csv.
 
 
 2. [Merge script](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/merging_anonymized_data.py) - This script merges Clipper and FasTrak anonymized account data in an iterative process, making a series of matches using different subsets of columns. This approach was chosen because it is reliable, only making matches when there is one record in each dataset with the stated match criteria. Additionally, by iterating over different subsets of columns, this method picks up matches that has one column misspelled but otherwise has all records matching. 
@@ -45,6 +47,11 @@ The purpose of this project is to merge Clipper and FasTrak account datasets. By
     *Output* - File of matched FasTrak and Clipper Accounts by fake account numbers, Record_id_c and Record_id_f
 
     * matches.csv
+    
+    ### Notes
+   
+   *  This code also does a clean-up on city misspellings by creating a dictionary that matches each unique city in the FasTrak and Clipper data sets to the correct city spelling. It does this by checking word similarly between each city on our data to the population of cities in CA (obtained from outside [data source](https://github.com/grammakov/USA-cities-and-states)) and returns the correctly-spelled city.
+   
 
 
 
