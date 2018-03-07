@@ -75,37 +75,17 @@ final.to_csv("~/Desktop/frequncy_all.csv", encoding='utf-8')
 
 fastrak_only = merged_feq_zip.merge(fastrak, on = ['INTPTLAT','INTPTLONG'], how = 'left')
 fastrak_only['percent'] = fastrak_only['frequency_x']/fastrak_only['frequency_y']
-
-
-# In[54]:
-
-fastrak_only[(fastrak_only['INTPTLAT'] == 32.553021)&(fastrak_only['INTPTLONG'] == -117.042454)]
-
-
-# In[55]:
-
+#fastrak_only[(fastrak_only['INTPTLAT'] == 32.553021)&(fastrak_only['INTPTLONG'] == -117.042454)]
 fastrak_only.to_csv("~/Desktop/frequncy_fastrak.csv", encoding='utf-8')
 
 
 # # Clipper Only
 
-# In[56]:
-
 clipper_only = merged_feq_zip.merge(clipper, on = ['INTPTLAT','INTPTLONG'], how = 'left')
 clipper_only['percent'] = clipper_only['frequency_x']/clipper_only['frequency_y']
-
-
-# In[57]:
-
-clipper_only[(clipper_only['INTPTLAT'] == 32.553021)&(clipper_only['INTPTLONG'] == -117.042454)]
-
-
-# In[58]:
-
+#clipper_only[(clipper_only['INTPTLAT'] == 32.553021)&(clipper_only['INTPTLONG'] == -117.042454)]
 clipper_only.to_csv("~/Desktop/frequncy_clipper.csv", encoding='utf-8')
 
-
-# In[ ]:
 
 
 
