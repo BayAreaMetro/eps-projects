@@ -55,6 +55,8 @@ The purpose of this project is to merge Clipper and FasTrak account datasets. By
 
 ## Results
 The results from the first merge are found [here](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/Results.md)
+
+The summary of overlap by geography is found [here](https://github.com/BayAreaMetro/usf-practicum/blob/master/fastrak-clipper-merge/Summary%20of%20Merge.ipynb)
    
 
 
