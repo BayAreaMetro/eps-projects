@@ -11,3 +11,5 @@ The purpose of this directory is to house all scripts related to FasTrak data cl
 	* Cleaning zip codes
 	* Label Fiscal Year
 	
+2. Transaction ETL Script
+This script processes and loads transaction data into AWS Data Lake (Redshift DB).
