@@ -1,4 +1,4 @@
-Estimating AC Transit Tranbay Ridership
+Estimating AC Transit Transbay Ridership
 ================
 Yeeling Tse
 8/21/2018
