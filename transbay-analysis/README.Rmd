@@ -1,5 +1,5 @@
 ---
-title: "Estimating AC Transit Tranbay Ridership"
+title: "Estimating AC Transit Transbay Ridership"
 author: "Yeeling Tse"
 date: "8/21/2018"
 output:
