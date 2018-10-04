@@ -5,6 +5,7 @@
 
 * [Transbay Analysis](/transbay-analysis)
 * [Exploration of Express Lane Customers](/)
+* [BAIFA Express Lanes](/baifa-customers)
 
 ## USF Data Science Practicum FY 17/18
 
