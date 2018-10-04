@@ -1,4 +1,4 @@
-**Draft**
+** Draft **
 
 ## Define the Problem Statement
 Determine the percentage of BAIFA express lane trips that are attributed to customers with FasTrak accounts in cities within the nine county bay region.  Provide a summary that lists trips by city and county.
