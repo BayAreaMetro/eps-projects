@@ -4,7 +4,7 @@
 ## Table of Contents
 
 * [Transbay Analysis](/transbay-analysis)
-* Project II
+* [Exploration of Express Lane Customers](/)
 
 ## USF Data Science Practicum FY 17/18
 
@@ -12,8 +12,12 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 
 ## USF Projects
 
-* Project I
-* Project II
+* [Clipper Exploration](/clipper-exploration)
+* [Initial Clipper Data Analysis](/initial-clipper-analysis)
+* [Fastrak Clipper Merge](/fastrak-clipper-merge)
+* [Fastrak Customer Service](/fastrak-customer-service)
+* [Fastrak Data Exploration](/fastrak-exploration)
+
 
 ### Data Science Practicum Students and Major Contributors
 
