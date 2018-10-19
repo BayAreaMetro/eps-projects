@@ -1,0 +1,402 @@
+---Clipper user overlap
+---creating a table that finds the total riders per operator for the month of November 2016
+select *
+into "clipper"."rpt-overlap1"
+from
+    (select 18 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 4 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 1 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 1 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 6 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 6 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 8 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 8 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 9 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 9 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 11 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 11 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 15 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 15 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 17 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 17 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 19 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 19 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 22 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 22 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 25 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 25 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 27 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 27 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 100 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 100 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+    union
+    (select 101 as operatorid1, count(distinct applicationserialnumber) as tot
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 101 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%');
+
+
+
+---creating a table that finds the overlap between SF Muni and all the other operators for the month of November 2016
+select *
+into "clipper"."rpt-overlap2" 
+from
+    (select 18 as operatorid1, count(distinct applicationserialnumber) as shared
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+union
+    (select 4, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 4 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 1, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 1 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 6, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 6 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 8, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 8 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 9, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 9 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 11, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 11 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 15, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 15 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 17, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 17 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 19, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 19 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 22, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 22 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 25, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 25 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 27, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 27 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 100, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 100 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 101, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 101 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%');
+
+
+
+---creating a table that includes the unique operatorid with the respecitve name
+select distinct operatorid, participantname
+into "clipper"."rpt-operatorsView"
+from "clipper"."faretransactions";
+
+
+
+---creating a table that joins the three tables to find the SF Muni share with the other operators
+select *
+into "clipper"."rpt-munishared1216"
+from 
+((select * from "clipper"."rpt-overlap1")
+left join
+(select * from "clipper"."rpt-overlap2")
+using(operatorid1)) as tb1
+left join
+(select * from "clipper"."rpt-operatorsView") as tb2
+on tb1.operatorid1 = tb2.operatorid
+
+
+
+---creating a table that finds the overlap between Bart and all the other operators for the month of November 2016
+select *
+into "clipper"."rpt-overlap3" 
+from
+    (select 4 as operatorid1, count(distinct applicationserialnumber) as shared
+    from "clipper"."sfofaretransaction"
+    where operatorid  = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+    and applicationserialnumber not like '2%')
+union
+    (select 18, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 18 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 1, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 1 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 6, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 6 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 8, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 8 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 9, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 9 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 11, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 11 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 15, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 15 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 17, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 17 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 19, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 19 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 22, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 22 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 25, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 25 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 27, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 27 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 100, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 100 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%')
+union
+    (select 101, count(distinct applicationserialnumber)
+    from "clipper"."sfofaretransaction"
+    where applicationserialnumber in
+        (select distinct(applicationserialnumber)
+        from "clipper"."sfofaretransaction"
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11 
+        and applicationserialnumber not like '2%') and operatorid = 101 and date_part('year', starttime) = 2016 
+        and date_part('month', starttime) = 11 and applicationserialnumber not like '2%');
+
+
+
+---creating a table that joins the three tables to find the Bart share with the other operators
+select *
+into "clipper"."rpt-bartshared1216"
+from 
+((select * from "clipper"."rpt-overlap1")
+left join
+(select * from "clipper"."rpt-overlap3")
+using(operatorid1)) as tb1
+left join
+(select * from "clipper"."rpt-operatorsView") as tb2
+on tb1.operatorid1 = tb2.operatorid;
+
+
+------------------------------------------------------------------------------------------
+---BART ridership patterns for different Muni user groups 
+---creating a table of the frequency of Muni riders 
+select count(1) as num, applicationserialnumber
+into "clipper"."rpt-munifrequency"
+from "clipper"."sfofaretransaction"
+where operatorid  = 18 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11
+    and applicationserialnumber in 
+        (select distinct applicationserialnumber from "clipper"."sfofaretransaction" 
+        where operatorid = 4 and date_part('year', starttime) = 2016 and date_part('month', starttime) = 11)
+group by applicationserialnumber
+order by 1 desc;
