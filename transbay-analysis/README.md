@@ -30,7 +30,7 @@ Methodology
 
 ### Preparing the data
 
-Add a column indicating the year of the transaction to later accomodate for the fare change in 2017
+Add a column indicating the year of the transaction to later accomodate for the fare change in 2017.
 
 ``` r
 add_year <- function(tr_df) {
