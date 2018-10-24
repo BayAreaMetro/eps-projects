@@ -6,6 +6,7 @@
 * [Transbay Analysis](/transbay-analysis)
 * [Exploration of Express Lane Customers](/)
 * [BAIFA Express Lanes](/baifa-customers)
+* [Clipper Data Store Documentation](https://github.com/BayAreaMetro/DataServices/tree/master/Project-Documentation/clipper)
 
 ## USF Data Science Practicum FY 17/18
 
