@@ -20,7 +20,9 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 * [Fastrak Customer Service](/fastrak-customer-service)
 * [Fastrak Data Exploration](/fastrak-exploration)
 
+## Student Findings
 
+* [EPS White Paper](https://mtcdrive.app.box.com/file/302192297149)
 ### Data Science Practicum Students and Major Contributors
 
 * Danai Avgerinou - [LinkedIn](https://www.linkedin.com/in/danai-avgerinou/)
