@@ -3,10 +3,10 @@
 
 ## Table of Contents
 
-* [Transbay Analysis](/transbay-analysis)
+* [Transbay Analysis](/transbay-analysis) (Author: Yeeling Tse)
 * [Exploration of Express Lane Customers](/)
 * [BAIFA Express Lanes](/baifa-customers)
-* [Clipper Data Store Documentation](https://github.com/BayAreaMetro/DataServices/tree/master/Project-Documentation/clipper)
+* [Clipper Data Store Documentation](https://github.com/BayAreaMetro/DataServices/tree/master/Project-Documentation/clipper)(Author: Yeeling Tse)
 
 ## USF Data Science Practicum FY 17/18
 
