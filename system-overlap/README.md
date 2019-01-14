@@ -78,3 +78,5 @@ final <- spread_other %>% group_by(bart_range, other_range) %>%
   summarise(total = n()) %>%
   spread(bart_range, total)
 ```
+
+Full results (done with Sept 2016 and Oct 2016 transactions) [here](https://mtcdrive.box.com/s/d81kqxbnyaqb0yaxhqi24hycgukvgg5j)
