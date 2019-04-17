@@ -94,3 +94,65 @@ Prior to implementing the data lake project, Lysa has one monthly report, Clippe
 <br><br>
 
 The First task of preprocessing is to figure out which columns are useful for dashboard to replace Crystal Report or frequently query in order to improve performance. Lysa has provided a spreadsheet, 1_Operations Report Data_12172018_charts (version 1), which the name is the same every month. 
+<br><br>
+For each number reported on Lysa's Clipper Update, it queries in the following way:<br>
+
+1. Average Weekday Ridership
+<br><br><br>
+
+2. Fee-Generating Transactions<br>
+The count of clipper transaction which generating revenue, ie, the count of rides that riders pay a fare to operator. For Bart or Caltrain, although a rider may tag twice for enter and exit, we only count once; similar to Golden State Ferry, only counting the tag when entering.
+<br><br>
+
+In this case, the query filter where transaction is subtype is 1, 2, 4. And the example query in Oct, 2018 is the follow:<br>
+select count(\*)<br>
+from sfofaretransaction<br>
+where (subtype = 1 or subtype = 2 or subtype = 4) and<br>
+extract(month from convert_timezone('UTC','PST', generationtime)) = 10 and <br>
+extract(year from generationtime) = 2018<br>
+; 
+<br><br>
+
+3. Unique Cards Used<br>
+The count of distinct cards used in a given month. The example query in Oct, 2018 is the follow:<br>
+select count(distinct applicationserialnumber)<br>
+from sfofaretransaction<br>
+where<br>
+    extract(month from generationtime) = 10 and<br>
+    extract(year from generationtime) = 2018 and<br>
+    applicationserialnumber < 2000000000<br>
+; <br>
+4. Settled Transit Operator Revenue<br>
+We do not have a precise query to tie the number as the Clipper Update. The best query for Oct, 2018 is the follow:<br>
+select sum(purseamount) + sum(GenericECashPurseAmount)/100.00<br>
+from sfofaretransaction<br>
+where extract(month from generationtime) = 10 and <br>
+      extract(year from generationtime) = 2018 and<br>
+      applicationserialnumber < 2000000000<br>
+;<br>
+
+Where the query result is about $54M whereas the Clipper Update has $59M. The error potentially come from the fact the query did not capture the monthly pass revenue from addvaluetransaction.
+<br><br>
+
+5. Others<br>
+* Generation time (generationtime) is in UTC, convert time zone to PST is necessary.
+* Clipper serial number (applicationserialnumber) greater than 2,000,000,000 are not counted toward the report as they are single-ride ticket
+<br>
+
+Mike Lee and Sara Barz's intern Yeeling Tse are two of the people who has knowledge and run query on the Clipper data store. However, Mike Lee is the contact person if there are more questions on both domain knowledge on Clipper and the data store.
+
+## Pipeline
+In the short run, the ideal situation Cubic would continue to supply SQL structured data to Clipper Data Store and we would have a pipeline to obtain the data monthly transfer to the Data Lake. For the first stage of this task, we use Matillion to ETL from Clipper Data Store to Data Lake on monthly basis. In the long run, the plan is to have Cubic upload the XML files to the S3 bucket and ETL to Data Lake. 
+
+
+## Schema and Table structures
+The Schema and Table structure are the same as Clipper Data Store initially, please refer to the data stationary provided by Cubic. However, the structure will be re-modified to improve performance.
+
+
+## Principle of Using Clipper Data
+The principle of using Clipper Data is that we have to stick with the numbers from Crystal Report for official reports, the data in Clipper Data Store could only be used by analytics only.<br>
+The outsourced process, showed on Figure 1, could not be changed in the short run because MTC has contract with the outsourced party that we could not obtain the data directly from Cubic for reporting. 
+<br>
+The planned work flow for Clipper Data in the Long Run
+![Screenshot](image/fig7.jpeg)
+Figure 7
