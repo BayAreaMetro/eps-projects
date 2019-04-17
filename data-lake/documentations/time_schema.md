@@ -42,7 +42,8 @@ The Date table does not limited to be used for Clipper transaction table but als
 <br><br>
 For example, when a dashboard is querying, it will join the transaction table and date table on the key and filter the condition on column(s) on date table so that the database is filtering out integer data entries instead of converting datetime object for every condition. 
 <br>
-Similarly a table to store all time information, "Time Table", is also needed. <br>
+Similarly a table to store all time information, "Time Table", is also needed.<br>
+
 1. Key links to transaction (Could be integer or string, but int preferred)
 2. Hour (int, 24-hour-format)
 3. Minute (int)
