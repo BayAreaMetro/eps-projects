@@ -50,14 +50,14 @@ Based on the data flow before implementing Data Lake, Cubic is responsible to up
 1) Crystal Report<br>
 2) Clipper Data Store<br>
 
-on monthly basis. The functionality of those are:<br>
-I. Crystal Report<br>
+on monthly basis. The functionality of those are:<br><br>
+1) Crystal Report<br>
 Crystal Report is the an outdated online platform that users may download the aggregated numbers from. MTC outsourced the work to Transsight to download the numbers need for reporting and put the numbers into Excel spreadsheet, then send it to MTC EPS staffs on a monthly basis. The process and data selection are set up about 10-20 years before 2019, no one understand why and how the reporting process and system are set up in this way. However, the numbers produced in Crystal Report is the official record to use for reporting purpose, confirmed by Ed Meng.<br>
 The contact person of each stakeholder:<br>
 MTC: Lysa Hale, Mike Lee, Ed Meng<br>
 Transsight: Gopi Purohit<br>
 Cubic: Jeffrey Wei<br>
-II. Clipper Data Store<br>
+2) Clipper Data Store<br>
 The operational data is sent to Clipper Data Store in monthly basis, but updated data made from Cubic would not be updated in Clipper Data Store; at the same time, there are transaction data entries are missing in Clipper Data Store, such as credit card transactions, because it was set up in this way previously between MTC and Cubic while no one in MTC now knows why it was set up in this way.<br>
 The Clipper data sent to MTC has two purpose:<br>
 <br>
