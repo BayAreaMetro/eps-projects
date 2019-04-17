@@ -24,4 +24,4 @@ After the Clipper data is generated in Clipper operators, the data is store in X
 Crystal Report was selected to report Clipper data in MTC was unclear as this is the decision made in 90's and the fact that most of the transit operator use Crystal Report for reporting purpose. The flexibility of Crystal Report was little as it only has pre-built reports. In the below screenshot Figure 1 is the main page of Crystal Report; the folders on the left show all categories of pre-built reports you may look at.
 <br>
 
-![Screenshot](/image/fig1.png)
+![Screenshot](image/fig1.png)
