@@ -21,7 +21,7 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 * [Fastrak Customer Service](/fastrak-customer-service)
 * [Fastrak Data Exploration](/fastrak-exploration)
 
-## Student Findings
+## Student Findings FY 17/18
 
 * [EPS White Paper](https://mtcdrive.app.box.com/file/302192297149)
 ### Data Science Practicum Students and Major Contributors
@@ -40,7 +40,10 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 * [](/)
 * [](/)
 
+## Student Findings FY 17/18
 
+* Anastasia Keck - [LinkedIn](https://www.linkedin.com/in/quinn-keck/)
+* Jacques Sham - [LinkedIn](https://www.linkedin.com/in/jacquessham/)
 
 
 
