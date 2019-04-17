@@ -75,43 +75,43 @@ To access S3 buckets on Trifacta, Trifacta requires data engineers to notify Tri
 <br><br>
 {<br>
     "Version": "2012-10-17",<br>
-    "Statement": [
-        {
-            "Sid": "Stmt1473804744000",
-            "Effect": "Allow",
-            "Action": [
-                "s3:Get\*",
-                "s3:List\*",
-                "s3:Put\*",
-                "s3:DeleteObject"
-            ],
-            "Resource": [
-                "arn:aws:s3:::dataviz-trifacta/\*",
-                "arn:aws:s3:::dataviz-trifacta",
-                "arn:aws:s3:::irpp-upload/\*",
-                "arn:aws:s3:::irpp-upload",
-                "arn:aws:s3:::irpp-clean/\*",
-                "arn:aws:s3:::irpp-clean",
-                "arn:aws:s3:::ipa-mtc-upload/\*",
-                "arn:aws:s3:::ipa-mtc-upload",
-                "arn:aws:s3:::ipa-mtc-clean/\*",
-                "arn:aws:s3:::ipa-mtc-clean",
-                "arn:aws:s3:::dpd-upload/\*",
-                "arn:aws:s3:::dpd-upload",
-                "arn:aws:s3:::dpd-clean/\*",
-                "arn:aws:s3:::dpd-clean",
-                "arn:aws:s3:::eps-upload/\*",
-                "arn:aws:s3:::eps-upload",
-                "arn:aws:s3:::eps-clean/\*",
-                "arn:aws:s3:::eps-clean",
-                "arn:aws:s3:::foam-upload/\*",
-                "arn:aws:s3:::foam-upload",
-                "arn:aws:s3:::foam-clean/\*",
-                "arn:aws:s3:::foam-clean"
-            ]
-        }
-    ]
-}
+    "Statement": [<br>
+        {<br>
+            "Sid": "Stmt1473804744000",<br>
+            "Effect": "Allow",<br>
+            "Action": [<br>
+                "s3:Get\*",<br>
+                "s3:List\*",<br>
+                "s3:Put\*",<br>
+                "s3:DeleteObject"<br>
+            ],<br>
+            "Resource": [<br>
+                "arn:aws:s3:::dataviz-trifacta/\*",<br>
+                "arn:aws:s3:::dataviz-trifacta",<br>
+                "arn:aws:s3:::irpp-upload/\*",<br>
+                "arn:aws:s3:::irpp-upload",<br>
+                "arn:aws:s3:::irpp-clean/\*",<br>
+                "arn:aws:s3:::irpp-clean",<br>
+                "arn:aws:s3:::ipa-mtc-upload/\*",<br>
+                "arn:aws:s3:::ipa-mtc-upload",<br>
+                "arn:aws:s3:::ipa-mtc-clean/\*",<br>
+                "arn:aws:s3:::ipa-mtc-clean",<br>
+                "arn:aws:s3:::dpd-upload/\*",<br>
+                "arn:aws:s3:::dpd-upload",<br>
+                "arn:aws:s3:::dpd-clean/\*",<br>
+                "arn:aws:s3:::dpd-clean",<br>
+                "arn:aws:s3:::eps-upload/\*",<br>
+                "arn:aws:s3:::eps-upload",<br>
+                "arn:aws:s3:::eps-clean/\*",<br>
+                "arn:aws:s3:::eps-clean",<br>
+                "arn:aws:s3:::foam-upload/\*",<br>
+                "arn:aws:s3:::foam-upload",<br>
+                "arn:aws:s3:::foam-clean/\*",<br>
+                "arn:aws:s3:::foam-clean"<br>
+            ]<br>
+        }<br>
+    ]<br>
+}<br>
 <br>
 When add S3 buckets, be sure to include '/\*' end of the directory to allow Trifacta to access all folders within this S3 buckets.
 <br>
