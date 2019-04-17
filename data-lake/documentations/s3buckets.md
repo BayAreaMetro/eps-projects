@@ -56,7 +56,7 @@ The clean data bucket are set up for staging purpose. Once data stewards has upl
 
 
 ## Format
-The pipeline access csv, excel, xml, json, text for tabular data. Other format may also be accepted but data engineers are responsible to build pipeline for unstructured data. csv is always the best format preferred to be uploaded.
+The pipeline access csv, excel, xml, json, text for tabular data. Other format may also be accepted but data engineers are responsible to build pipeline for unstructured data. csv is always the best format preferred to be uploaded. And excel format is highly discouraged.
 
 
 ## Access for Data Stewards
