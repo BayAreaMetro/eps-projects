@@ -52,6 +52,8 @@ Similarly a table to store all time information, "Time Table", is also needed.<b
 6. isEveningCommute (Boolean, like 4pm - 8 pm)<br><br>
 Optional:
 7. isNight (Boolean, when transportation operates less frequent after Evening commute time)<br><br>
+
 generationtime column in Clipper transaction table is in UTC time, but the time in Time Table time entries is based on local California time PST, and adjusted for day light saving adjustment. It is the best to convert the time to PST because all the data entries are gathered in California and we do not have to worry about time inconsistent.
 <br><br>
+
 Another advantage of having Date and Time schema is that if in the future we decide to add new columns related to date or time, such as isRushHour, we can create new columns in Date and Time schema without making any adjustment on the transaction tables.
