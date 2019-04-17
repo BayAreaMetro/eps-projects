@@ -31,15 +31,15 @@ One solution is to create a table to store all the date information, called "Dat
 9. Quarter-Year (varchar, like "2019-Q1")
 10. Week of Year (int)
 11. Week of Year-Year (varchar, like "2019-51")
-12. isWeekday (Boolean)<br>
+12. isWeekday (Boolean)<br><br>
 Optional:
 13. Holiday(varchar, like "Thanksgiving Day")
 14. Season(varchar, like "Summer")
 <br>
 ** At the same time, the transaction tables will create a new column for key link to the Date Table **
-<br>
+<br><br>
 The Date table does not limited to be used for Clipper transaction table but also other tables like Fastrak transaction table. 
-<br>
+<br><br>
 For example, when a dashboard is querying, it will join the transaction table and date table on the key and filter the condition on column(s) on date table so that the database is filtering out integer data entries instead of converting datetime object for every condition. 
 <br>
 Similarly a table to store all time information, "Time Table", is also needed. 
@@ -48,9 +48,9 @@ Similarly a table to store all time information, "Time Table", is also needed. 
 3. Minute (int)
 4. isAfternoon(Boolean, dummy indicate AM or PM, 0 is AM, 1 is PM)
 5. isMorningCommute (Boolean, like 5am - 10am)
-6. isEveningCommute (Boolean, like 4pm - 8 pm)
+6. isEveningCommute (Boolean, like 4pm - 8 pm)<br><br>
 Optional:
-7. isNight (Boolean, when transportation operates less frequent after Evening commute time)<br>
+7. isNight (Boolean, when transportation operates less frequent after Evening commute time)<br><br>
 generationtime column in Clipper transaction table is in UTC time, but the time in Time Table time entries is based on local California time PST, and adjusted for day light saving adjustment. It is the best to convert the time to PST because all the data entries are gathered in California and we do not have to worry about time inconsistent.
-<br>
+<br><br>
 Another advantage of having Date and Time schema is that if in the future we decide to add new columns related to date or time, such as isRushHour, we can create new columns in Date and Time schema without making any adjustment on the transaction tables.
