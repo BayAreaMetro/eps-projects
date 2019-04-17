@@ -16,7 +16,7 @@ select avg(countperday) from<br>
         extract(year from convert_timezone('UTC','PST', generationtime)) = 2018 and<br>
         (subtype = 1 or subtype = 2  or subtype = 4)<br>
     group by 2,3<br>
-) where dow between 1 and 5<br>
+) where dow between 1 and 5;<br>
 
 The query is complex and computationally expensive.<br>
 One solution is to create a table to store all the date information, called "Date Table". The Date Table will consists:<br>
