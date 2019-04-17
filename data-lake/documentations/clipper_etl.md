@@ -25,3 +25,21 @@ Crystal Report was selected to report Clipper data in MTC was unclear as this is
 <br>
 
 ![Screenshot](image/fig1.png)
+Figure 1
+
+<br><br>
+If you download the report from Crystal Report, you will go to the report and hit "Schedule" (When you hit "View" or "View Latest Instance" give you a blank gray page). Please see Figure 2.
+![Screenshot](image/fig2.png)
+Figure 2
+<br><br>
+![Screenshot](image/fig3.png)
+Figure 3
+<br><br>
+Once you hit schedule, you are able to select date range and output format. Note that you are only allow to select report up to 90 days prior. The useful report format is in PDF; although it is possible to export to TSV, the format is not in a desired tabular format that could be easily to ETL from such TSV file to push to relational database. Figure 4 is the screenshot of the report in PDF format and Figure 5 is the screenshot of the report TSV format. You may see the format TSV format is not in tabular form because there is a column header associated with every row that means the file is downloaded to be the order of header, observation, header, observation...instead of having header, and all observations.
+![Screenshot](image/fig4.png)
+Figure 4
+![Screenshot](image/fig5.png)
+Figure 5
+<br>
+Due to the given constraints, it makes it harder to ETL clipper data to Redshift.<br>
+Prior to the Data Lake Implementation, the flow of reporting Clipper data is below.<br>
