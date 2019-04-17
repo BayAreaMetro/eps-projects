@@ -67,4 +67,30 @@ Cubic is responsible to upload the accurate data onto Crystal Report and provide
 2) Analytics Purpose
 The Clipper Data Store data is meant for analytics purpose because the Clipper Data Store data is no the same as the raw data in Crystal Report. There are two major reasons to that:<br>
 i) Cubic did not transfer the full data set in sfoAddVauleTransactions and sfoToTAddValueTransactions tables: The credit card transactions are missing, but there is no clear reason why Cubic not providing these transactions. <br>
-ii) Cubic do not update the data set in Clipper Data Store. If there is changes to the data (One Possible reason due to operator sent the data late) after Cubic send the data to Clipper Data Store, no change will be made.<br>
+ii) Cubic do not update the data set in Clipper Data Store. If there is changes to the data (One Possible reason due to operator sent the data late) after Cubic send the data to Clipper Data Store, no change will be made.<br><br>
+
+Also note that, Caltrain does not require monthly pass travelers to tag Clipper every trip. The ridership numbers reported to board member or analytics rely on a formula to adjust from the ridership provided  by Crystal Report. 
+
+## Goal
+
+The goal of this task includes:<br>
+1) Transfer the existing data from Clipper Data Store (2013-2018) to Data Lake<br>
+2) Set up a procedure to have Cubic provide monthly raw data directly to Data Lake and build a pipeline to transform the data into data warehouse<br>
+3) Design and Construct schema and table structure to improve performance for dashboard<br>
+
+## Transferring existing data
+The data from Clipper Data Store between 2013 and 2018 was the first batch of data to be imported into Redshift. The process was using Trifacta as ETL tool to transfer the data. However, Trifacta by default is only able to handle up to 150 GB table. The data between 2013 and 2018 contains about 1.8 billion rows that Trifacta was overflowed and not able to handle the transfer. If the data size is consistently large, it is advised to upgrade the memory size of Trifacta or switch to Matillion. However, since it is only an one time operation, we do not need to have larger node in Trifacta for the regular operation unless the transfer transaction is handling more than 150 GB data.
+
+## Preprocessing
+Two proposed strategies to improve data lake performance for dashboard is to create views on data warehouse and create a star-schema structure database. Understanding the columns structures are required for both of the strategies.<br>
+Prior to implementing the data lake project, Lysa has one monthly report, Clipper Update, which obtain the data from Crystal Report. The report includes:<br>
+* Average Weekday Ridership
+* Fee-Generating Transactions
+* Unique Cards Used
+* Active Card Accounts
+* Settled Transit Operator Revenue
+* Customer Service Representative calls
+* Website Traffic: Unique Visitors and Website Visits
+<br><br>
+
+The First task of preprocessing is to figure out which columns are useful for dashboard to replace Crystal Report or frequently query in order to improve performance. Lysa has provided a spreadsheet, 1_Operations Report Data_12172018_charts (version 1), which the name is the same every month. 
