@@ -42,6 +42,9 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 
 ## Student Findings FY 18/19
 
+
+### Data Science Practicum Students and Major Contributors
+
 * Quinn Keck - [LinkedIn](https://www.linkedin.com/in/quinn-keck/)
 * Jacques Sham - [LinkedIn](https://www.linkedin.com/in/jacquessham/)
 
