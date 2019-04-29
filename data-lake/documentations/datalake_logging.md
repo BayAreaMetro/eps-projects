@@ -12,7 +12,8 @@ There are 4 potential tools are Data Lake logging and reporting in addition to d
 * No default or suggestion on setting alarm or building dashboard
 * Very low cost if AWS customer: 
 * $3 per dashboard per month and fraction of dollar of other base charge per month
-* Allow to do logging analytics and visualization in the same platfor
+* Allow to do logging analytics and visualization in the same platform
+
 <br>
 
 ![Screenshot](image/redshift_monitoring.gif)
@@ -28,6 +29,7 @@ There are 4 potential tools are Data Lake logging and reporting in addition to d
 * $2000 per year
 * Hard to set up or add user
 * Reports are not easy to deploy
+
 <br>
 
 ![Screenshot](image/agent-simple-monitor.png)
@@ -38,16 +40,17 @@ There are 4 potential tools are Data Lake logging and reporting in addition to d
 * Pricing range from $10-100 per month per host
 * Supportive reputation
 * Takes long time to learn
+
 <br>
 
 ![Screenshot](image/AWS_Elasticsearch.png)
 
 ### Dynatrace
-
 * Relatively new company, provide better UI than Nagios and New Relic
 * Easy Dashboard creation
 * Takes long time to learn
 * Pricing starting from $216 per month per host
+
 <br>
 
 ![Screenshot](image/smartscape-aws-1600-cf8d970663.png)
