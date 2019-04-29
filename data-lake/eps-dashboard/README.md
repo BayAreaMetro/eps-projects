@@ -24,4 +24,4 @@ Number of unique clipper cards used in one month.
 
 **Monthly Clipper Transactions**
 
-Borh the total number of clipper transcations and the total number of clipper fare only transcations are important. There must be 20 million of each month to avoid higher fees.
+Borh the total number of clipper transcations and the total number of clipper fare only transcations are important. There must be 20 million of each every month to avoid higher fees.
