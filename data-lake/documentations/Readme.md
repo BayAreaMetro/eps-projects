@@ -1,6 +1,7 @@
 # Table of Content
 
 ## Prerequisites of Data Lake Implementation
+* [Data Lake Implementation Research](etl_explain.md)
 * [Requirements](requirements.md)
 
 ## Tools
