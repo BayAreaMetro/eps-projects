@@ -14,8 +14,11 @@ There are 4 potential tools are Data Lake logging and reporting in addition to d
 * $3 per dashboard per month and fraction of dollar of other base charge per month
 * Allow to do logging analytics and visualization in the same platfor
 <br>
+
 ![Screenshot](image/redshift_monitoring.gif)
+
 <br>
+
 ![Screenshot](image/cw_log_stream.png)
 
 ### Nagios

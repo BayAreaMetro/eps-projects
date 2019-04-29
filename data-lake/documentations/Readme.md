@@ -3,6 +3,7 @@
 ## Prerequisites of Data Lake Implementation
 * [Data Lake Implementation Research](etl_explain.md)
 * [ETL Tools work with AWS Redshift](etl_tools.md)
+* [AWS RedShift Logging Tools](datalake_logging.md)
 * [Requirements](requirements.md)
 
 ## Tools
