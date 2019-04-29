@@ -80,4 +80,32 @@ The ideal file would have look like this:<br>
 ![Screenshot](image/ClipperReportTemplateNum.png)
 Figure 6<br>
 
+An example could be found in "testing_clipper_hl.csv".
+Note that the template intended to have Blank columns to fit the format from "Copy of Copy of Monthly FasTrak-Clipper Stats for Mgmt CH2M May 2016 v2-01.xlsx" and the data format of the template is supposed to be the same, so that it avoids Gopi to have extra work that may lead to format inconsistence. The data format is not consistent to Redshift but the work flow in Trifacta is going to reformat to match the data type in Redshift.
+<br>
 
+# Wrangling data
+The ETL process will be done by Trifacta for this data set with standard ETL procedure in the Data Lake Documentation. 
+
+# Experiment Phase
+We have built two work flow for experiment phase in order to create table, engineering the data type and push to Redshift. There are two work flow created for this purpose:<br>
+1) Initiate Clipper Reporting Data to Staging<br>
+2) Initiate Clipper Reporting Data to Lake<br>
+that the work flow wrangles the data from S3 to Staging db and from Staging db to Lake, respectively.<br><br>
+
+In order to wrangle data from S3 with schedule, the first step is to create a folder in the S3 bucket that you can parameterize on Trifacta. After that, transform the data on Trifacta. The data type used in these work flow should only contains integer, float, character, timestamp. Some of the columns came with string like "1,300,940" that Trifacta is not able to convert this to integer; on Trifacta, you are supposed to select this column and remove all symbol in order to get rid of the double quotation and comma and convert to integers. For the convenience in building dashboard, we shall make percentage data like 75.34% to 0.7534 instead. In order to do this on Trifacta, you should replace '%' with '' to get rid of the percentage symbol, then do the calculation operation to divide the column by 100. This type of columns should not be simply remove all symbol in order to preserve the decimal point. However, you are not allow to do the same division with different columns at the same time, therefore, you have repeat these two step on Trifacta on every column originally was percentage.<br><br>
+
+
+Month, Year, YrMo were tricky to handle as date/time data type. For the convenience when building dashboard and simplicity, we have Month and Year in integer. YrMo will be in character because it created error when convert this to date/time type, and this is meant for data verification from human. We have to convert the date entry to timestamp. To do this, first concatenate month year to have MM/yyyy format in varchar. Then, convert date format to M/d/yyyy HH:mm:ss that would convert varchar to timestamp. This column will be useful if building a dashboard with time series charts.<br><br>
+
+
+Truncate do not check existing rows in Redshift but based on the source files. The next experiment we did is to wrangle a larger file, which consists all rows up to Nov, 2018. At the same time, the Redshift table consists of the observation of Nov, 2018 already. Once we wrangle the larger file with full reporting data set, the result of wrangling did not prevent the duplicated rows in Nov, 2018. That means we have to be careful of the pipeline and prevent duplication happening as the truncate command do not check rows with Trifacta.
+
+# Implementation Phase
+We have built two work flow that is for production:<br>
+1) Clipper Reporting to Staging, the table name in Staging is clipper_reporting<br>
+2) Clipper Reporting to Lake, the table name in Lake is clipper_reporting<br>
+that two work flows are to wrangle data from S3 to Staging and Staging to Lake. 
+<br>
+
+These work flow are built for production use.
