@@ -2,6 +2,8 @@
  
 These queries are represetative of metrics in monthly Clipper and FasTrak reports shared with top excutives.  They are queries from the Data Lake, and the numbers will not match the numbers in Crystal Reports.  We learned by talking with various member of the eps team that these numbers will never match up.  When possible, we've included how off different metrics were.
 
+We also created a dimension table to improve query performance in dashboards, that sql is included as well.
+
 ## Metrics
 
 **Average Weekday Ridership**
