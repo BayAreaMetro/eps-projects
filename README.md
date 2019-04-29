@@ -35,9 +35,9 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 
 ## USF Projects
 
-* [](/)
-* [](/)
-* [](/)
+* [Data Lake](/data-lake)
+* [Clipper Ridership Predication Models](/clipper-models)
+* [EPS Dashboard](/)
 * [](/)
 
 ## Student Findings FY 18/19
