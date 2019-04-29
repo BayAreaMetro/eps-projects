@@ -1,7 +1,7 @@
 # Table of Content
 
 ## Prerequisites of Data Lake Implementation
-* [Requirements](/requirements.md)
+* [Requirements](requirements.md)
 
 ## Tools
 * [AWS User Buckets](/AWS_User_Bucket.pdf)
