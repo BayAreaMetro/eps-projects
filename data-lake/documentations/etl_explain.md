@@ -35,10 +35,11 @@ Notes:
 * Each data is tagged with meta data tags
 * Transforms data when needed
 <br>
+
 [Reference](https://www.dataversity.net/data-warehouse-vs-data-lake-technology-different-approaches-managing-data/)
 
 ## AWS Requirements
-https://aws.amazon.com/big-data/datalakes-and-analytics/
+[AWS Data Lake Documentation](https://aws.amazon.com/big-data/datalakes-and-analytics/)
 * Object Storage - S3
 * Backup and Archive
 * Data Catalog -  AWS Glue
@@ -48,7 +49,9 @@ https://aws.amazon.com/big-data/datalakes-and-analytics/
 * Big Data Processing - Amazon EMR
 * Data Warehousing - Amazon Redshift
 
-[Reference](https://www.big-data-europe.eu/wp-content/uploads/D3.5-Big_Data_platform_requirements_architecture_and_usage.pdf)<br>
+[Reference](https://www.big-data-europe.eu/wp-content/uploads/D3.5-Big_Data_platform_requirements_architecture_and_usage.pdf)
+
+<br>
 * Includes hardware requirments, nodes etc
 * Data Ingestion and Persistence
 * Data Access
