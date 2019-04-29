@@ -22,6 +22,7 @@ Including Trifacta, there are 5 ETL Tools are potentially MTC may choose from fo
 Demo on [YouTube](https://youtu.be/mcgeYd1WhaM)
 <br>
 ![Screenshot](image/stitch1.png)
+<br>
 ![Screenshot](image/stitch2.png)
 
 ### FiveTran
