@@ -13,7 +13,7 @@
 
 This repo contains documentation of the work done for the MTC-USF practicum during the 2017-2018 school year. The practicum is a 9-month program in which two students from the Masters in Analytics program at USF work with MTC to use data to provide recommendations and inform business decisions.
 
-## USF Projects
+## USF Projects FY 17/18
 
 * [Clipper Exploration](/clipper-exploration)
 * [Initial Clipper Data Analysis](/initial-clipper-analysis)
@@ -33,7 +33,7 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 
 This repo contains documentation of the work done for the MTC-USF practicum during the 2018-2019 school year. The practicum is a 9-month program in which two students from the Masters in Data Science program at USF work with MTC to use data to provide recommendations and inform business decisions.
 
-## USF Projects
+## USF Projects FY 18/19
 
 * [Data Lake](/data-lake)
 * [Clipper Ridership Predication Models](/clipper-models)
