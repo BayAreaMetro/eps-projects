@@ -23,33 +23,33 @@ There are 4 potential tools are Data Lake logging and reporting in addition to d
 ![Screenshot](image/cw_log_stream.png)
 
 ### Nagios
-1. Well trusted in industry for years
-2. Use C/Python to manage AWS plugins
-3. Old UI
-4. $2000 per year
-5. Hard to set up or add user
-6. Reports are not easy to deploy
+* Well trusted in industry for years
+* Use C/Python to manage AWS plugins
+* Old UI
+* $2000 per year
+* Hard to set up or add user
+* Reports are not easy to deploy
 
 <br>
 
 ![Screenshot](image/agent-simple-monitor.png)
 
 ### New Relic
-* Most well-known in industry for years
-* Many plugins, including the ones for AWS Redshift, is not supported by New Relic
-* Pricing range from $10-100 per month per host
-* Supportive reputation
-* Takes long time to learn
+* Most well-known in industry for years
+* Many plugins, including the ones for AWS Redshift, is not supported by New Relic
+* Pricing range from $10-100 per month per host
+* Supportive reputation
+* Takes long time to learn
 
 <br>
 
 ![Screenshot](image/AWS_Elasticsearch.png)
 
 ### Dynatrace
-* Relatively new company, provide better UI than Nagios and New Relic
-* Easy Dashboard creation
-* Takes long time to learn
-* Pricing starting from $216 per month per host
+* Relatively new company, provide better UI than Nagios and New Relic
+* Easy Dashboard creation
+* Takes long time to learn
+* Pricing starting from $216 per month per host
 
 <br>
 
