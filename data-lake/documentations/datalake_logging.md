@@ -23,12 +23,12 @@ There are 4 potential tools are Data Lake logging and reporting in addition to d
 ![Screenshot](image/cw_log_stream.png)
 
 ### Nagios
-* Well trusted in industry for years
-* Use C/Python to manage AWS plugins
-* Old UI
-* $2000 per year
-* Hard to set up or add user
-* Reports are not easy to deploy
+1. Well trusted in industry for years
+2. Use C/Python to manage AWS plugins
+3. Old UI
+4. $2000 per year
+5. Hard to set up or add user
+6. Reports are not easy to deploy
 
 <br>
 
