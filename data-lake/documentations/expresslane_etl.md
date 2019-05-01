@@ -30,7 +30,11 @@ The goal of this task includes:<br>
 BAIFA data is the first data set that was uploaded to AWS Redshift from a tabular file uploaded in S3. Different with Clipper Data, the existing BAIFA data is also transfer via a tabular file to the data engineers. The files are stored in excel files and there are several difficulty to face:<br>
 
 1. Trifacta did not handling excel files well
-Trifacta was able to detect the excel files in S3 buckets but it did not upload the data set properly. In the first run, Trifacta was able to transform the data but fail to push the data into the staging database in Redshift. In the result of the transformation, there were a very small fraction of mismatch data in all columns in the excel file, except dTripRevenueData, dTripDataTime, biTripID, biTagNumber, vcPlate. We try to open the excel file with Pandas through Python, all the data we did not find any mismatch data structure in those mismatch columns, ie, the all data in those columns match the data structure and format. We believe that there were no mismatch values in the excel files. When we tried to wrangle the flow with excel files in different months, there were some excel files were encoded into non-human-readable special characters. The reply of Trifacta claimed that mishandling was to older version of Trifacta. At the same, Trifacta were not able to read excel files properly if the excel files are coming. <br><br>After we have asked Trifacta to update the version of Trifacta, it did not resolve the problem of excel files were encoded into non-human-readable special characters. We have to ask Trifacta Support to investigate it.
+Trifacta was able to detect the excel files in S3 buckets but it did not upload the data set properly. In the first run, Trifacta was able to transform the data but fail to push the data into the staging database in Redshift. In the result of the transformation, there were a very small fraction of mismatch data in all columns in the excel file, except dTripRevenueData, dTripDataTime, biTripID, biTagNumber, vcPlate. We try to open the excel file with Pandas through Python, all the data we did not find any mismatch data structure in those mismatch columns, ie, the all data in those columns match the data structure and format. We believe that there were no mismatch values in the excel files. When we tried to wrangle the flow with excel files in different months, there were some excel files were encoded into non-human-readable special characters. The reply of Trifacta claimed that mishandling was to older version of Trifacta. At the same, Trifacta were not able to read excel files properly if the excel files are coming. 
+<br><br>After we have asked Trifacta to update the version of Trifacta, it did not resolve the problem of excel files were encoded into non-human-readable special characters. We have to ask Trifacta Support to investigate it.
+
+![Screenshot](image/TrifactaPoorEncode.png)
+
 <br>
 
 2. The dimension between the BAIFA table in Redshift and Excel files are inconsistent<br>
@@ -51,3 +55,15 @@ One possible solution is to convert the Excel files from .xlsx to .xls and save 
 <br>
 
 The conclusion to this experiments is that both xls and xlsx are not an ideal format to wrangle from Trifacta. It is best to query from the data stewards' database and save as csv files and store on S3.
+
+## Solutions Found
+I. Encoding issue from Trifacta
+We have consulted from Trifacta support about Trifacta was not able to encode Excel files from S3 properly. The reason is that the Excel files in the S3 buckets did not have an extension in the filename, ie, the file name was "Nov  2018 Trips_" where it is supposed to be "Nov2018Trips_.xlsx" to allow Trifacta to read the file properly.
+<br>
+With the same file, after adding the Excel extension, in S3 bucket, Trifacta was able to encode the characters in the Excel file properly.<br>
+
+![Screenshot](image/TrifactaGoodFile.png)
+
+<br>
+In the SOP of data stewards to upload data set onto S3 buckets, there should be a guideline to instruct how the filename and file format should be. The filename should not contain whitespace and special characters and should end with a proper extension when upload that file onto S3 bucket.
+If there is any future technical issue, one should email to <b>support@trifacta.com</b>
