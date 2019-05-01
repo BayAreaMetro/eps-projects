@@ -34,7 +34,7 @@ Cubic: The consultant and data steward of Clipper. Cubic handles all Clipper dai
 
 Transsight: The consultant to generate reports and send to MTC. Gopi Purohit is the contact person.<br>
 
-Data Engineers: Kearey Smith and USF interns, including Jacques Sham, Anastasia Keck
+Data Engineers: Kearey Smith and USF interns, including Jacques Sham, Quinn Keck
 <br>
 
 EPS staffs: EPS staffs, including Lysa Hale, Mike Lee, Ed Meng
