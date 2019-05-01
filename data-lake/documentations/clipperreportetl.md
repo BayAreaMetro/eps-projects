@@ -17,7 +17,7 @@ Note that transaction data from Cubic are pipelined to two channels: Crystal Rep
 
 In the long run, the optimal data work flow should work as below:
 
-![Screenshot](image/fig7.png)
+![Screenshot](image/fig7.jpeg)
 
 Figure 2<br>
 
