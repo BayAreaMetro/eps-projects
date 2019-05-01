@@ -12,9 +12,9 @@ We also created a dimension table to improve query performance in dashboards, th
 
 * [Clipper and FasTrak Google Data Studio Version One](https://datastudio.google.com/u/1/reporting/1-pk3dgT9gWh6QeuIiekzveX7SCSEqIpl/page/eTzn)
 
-## PPI Data
+## Personally Identifiable Infomration (PII) Data
 
-All of these queries aggergate the data so no personally identifiable information is shown.  Any data/query dealing with PII data would only be seen internally. 
+All of these queries aggergate the data at a level that excludes PII.  Any data/query dealing with PII data would only be seen internally. 
 
 * [Diagram of Clipper Tables with PII Columns Highlighted](https://github.com/BayAreaMetro/eps-projects/blob/master/data-lake/documentations/PII_Clipper_Data_Store_ERD.pdf)
 
