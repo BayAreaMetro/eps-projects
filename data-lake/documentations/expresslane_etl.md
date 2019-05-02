@@ -67,3 +67,5 @@ With the same file, after adding the Excel extension, in S3 bucket, Trifacta was
 <br>
 In the SOP of data stewards to upload data set onto S3 buckets, there should be a guideline to instruct how the filename and file format should be. The filename should not contain whitespace and special characters and should end with a proper extension when upload that file onto S3 bucket.
 If there is any future technical issue, one should email to <b>support@trifacta.com</b>
+<br><br>
+In Trifacta, the workflow <b>TestingS3_Excel</b> demonstrates Trifacta is able to read Excel from S3 bucket and convert to JSON which tells you that Trifacta is able to read one file and convert to other format.
