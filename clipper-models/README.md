@@ -7,7 +7,7 @@ To improve prediction accuaray, we joined that data with tables containing weath
 * [Weather Download](https://www.ncdc.noaa.gov/cdo-web/datasets#GHCND)  (It must be requested for download.)
 
 
-Included are notebooks for Random Forest Models, which using the following features:
+Included are notebooks for Random Forest, XGBOOST, and Facebook Prophet Models which using the following features:
     
     Time Based Features: day of week, day of the month, month, year.
     
