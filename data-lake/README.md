@@ -16,8 +16,8 @@ In this repo we’ve included:
 
 In the future, the Data Lake will look like this:
 
-![Screenshot](image/SuggestedImprovement_Shortrun.png)
+![Screenshot](documentations/image/SuggestedImprovement_Shortrun.png)
 
 The process for Data Stewards to upload their data looks like this:
 
-![Screenshot](image/Blank_Data_Uploading_SetUp.png)
+![Screenshot](documentations/image/Blank_Data_Uploading_SetUp.png)
