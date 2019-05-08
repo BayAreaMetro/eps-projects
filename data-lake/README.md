@@ -9,9 +9,9 @@ To make the data uploading as seamless and low burden as possible, we have devis
 In addition to transferring datasets from data stewards, we would also need to transfer data from different databases that currently exist at the MTC.  We have experimented with using data wrangling tools like Trifacta as well as writing our own Python script.  We also created an Electronic Payments Dashboard we are creating using the Data Lake.
 
 In this repo we’ve included:
-* [Documentation for the Data Lake] (/documentations)
-* [Python ETL Script] (python-etl)
-* [Electronic Payments Dashboard Documentation] (/eps-dashboard)
+* [Documentation for the Data Lake](/documentations)
+* [Python ETL Script](/python-etl)
+* [Electronic Payments Dashboard Documentation](/eps-dashboard)
 
 
 In the future, the Data Lake will look like this:
