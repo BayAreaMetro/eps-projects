@@ -11,9 +11,9 @@ Included are notebooks for Random Forest, XGBOOST, and Facebook Prophet Models w
     
     Time Based Features: day of week, day of the month, month, year.
     
-    Holiday Indicator: 1 if this day was a Holiday and 0 if it was not.
+    Holiday Indicator: 1 if this day was a holiday and 0 if it was not.
     
-    Holiday Indicators for individual Holidays (1 if this day was Christmas, 0 otherwise etc.)
+    Holiday Indicators for individual holidays (1 if this day was Christmas, 0 otherwise etc.)
     
     The min tempertaure, max temperature, and perciptation in San Francisco for that day.
 
