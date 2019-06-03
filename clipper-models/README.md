@@ -3,8 +3,8 @@
 Using machine learning models, we wanted to see how well we could predicted Clipper card rides accross all transit operators.  The data is queried from the Data Lake's clipper.sfofaretransaction table. Different data sources across the agency will have different numbers.  This is to demonstrate that ridership can be predicted, but the counts may not match up with official accounts from crystal reports.
 
 To improve prediction accuaray, we joined that data with tables containing weather and holidays.  This data came from:
-* [Holidays](https://gist.github.com/shivaas/4758439)
-* [Weather Download](https://www.ncdc.noaa.gov/cdo-web/datasets#GHCND)  (It must be requested for download.)
+* [Shivaas Gulati's Bank Holidays CSV](https://gist.github.com/shivaas/4758439)
+* [National Centers for Environmental Information (NCEI)](https://www.ncdc.noaa.gov/cdo-web/datasets#GHCND)  (It must be requested for download.)
 
 
 Included are notebooks for Random Forest, XGBOOST, and Facebook Prophet Models which using the following features:
