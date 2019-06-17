@@ -1,4 +1,4 @@
-# Time Schema Proposal
+# Time Table Proposal
 
 One of the tasks of the Data Lake Implementation is to create a dashboard for Lysa Hale on Clipper Data set. We have prototyped a reporting tool for her in Google Data Studio, but the performance is poor due to excessive time consumed on querying from RedShift. There is a need for restructure the data base table structure to improve performance. One possible factor of poor performance when filtering generationtime on clipper transaction because generationtime is a datetime column. The solution to this is to convert the existing Clipper and Fastrak transaction tables to Star Schema, ie, to create a time schema to increase the time dimension to the transaction table.
 <br><br>
