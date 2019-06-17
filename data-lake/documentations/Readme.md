@@ -19,4 +19,4 @@
 * [Express Lane ETL](expresslane_etl.md)
 
 ## Improvement
-* [Time Schema](time_schema.md)
+* [Time Table](time_schema.md)
