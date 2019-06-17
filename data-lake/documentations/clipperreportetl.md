@@ -95,11 +95,11 @@ that the work flow wrangles the data from S3 to Staging db and from Staging db t
 
 In order to wrangle data from S3 with schedule, the first step is to create a folder in the S3 bucket that you can parameterize on Trifacta. After that, transform the data on Trifacta. The data type used in these work flow should only contains integer, float, character, timestamp. Some of the columns came with string like "1,300,940" that Trifacta is not able to convert this to integer; on Trifacta, you are supposed to select this column and remove all symbol in order to get rid of the double quotation and comma and convert to integers. For the convenience in building dashboard, we shall make percentage data like 75.34% to 0.7534 instead. In order to do this on Trifacta, you should replace '%' with '' to get rid of the percentage symbol, then do the calculation operation to divide the column by 100. This type of columns should not be simply remove all symbol in order to preserve the decimal point. However, you are not allow to do the same division with different columns at the same time, therefore, you have repeat these two step on Trifacta on every column originally was percentage.<br><br>
 
-
+## Date Types
 Month, Year, YrMo were tricky to handle as date/time data type. For the convenience when building dashboard and simplicity, we have Month and Year in integer. YrMo will be in character because it created error when convert this to date/time type, and this is meant for data verification from human. We have to convert the date entry to timestamp. To do this, first concatenate month year to have MM/yyyy format in varchar. Then, convert date format to M/d/yyyy HH:mm:ss that would convert varchar to timestamp. This column will be useful if building a dashboard with time series charts.<br><br>
 
-
-Truncate do not check existing rows in Redshift but based on the source files. The next experiment we did is to wrangle a larger file, which consists all rows up to Nov, 2018. At the same time, the Redshift table consists of the observation of Nov, 2018 already. Once we wrangle the larger file with full reporting data set, the result of wrangling did not prevent the duplicated rows in Nov, 2018. That means we have to be careful of the pipeline and prevent duplication happening as the truncate command do not check rows with Trifacta.
+## Duplicates
+If the upload file consists of two identical rows, Trifacta will upload the rows to Redshift without comparing them to see if they are duplicates.   If duplicate rows are upload to the table through Trifacta, the table will contain multiple versions of the same row.  If there’s duplicate files in an s3 bucket that is set up for automatic upload, Trifacta will also not detect that they are duplicates and upload to the table.
 
 # Implementation Phase
 We have built two work flow that is for production:<br>
