@@ -46,7 +46,7 @@ Data Lake - AWS S3, AWS Redshift<br>
 ETL - Trifacta, Matillion<br>
 
 ## CSV Template
-The screenshot of the CSV template version 1, named "template_update.csv", is:
+The screenshot of the CSV (comma separated) template version 1, named "template_update.csv", is:
 ![Screenshot](image/ClipperReportTemplate.png)
 
 Figure 4<br>
@@ -85,7 +85,7 @@ Note that the template intended to have Blank columns to fit the format from "Co
 <br>
 
 # Wrangling data
-The ETL process will be done by Trifacta for this data set with standard ETL procedure in the Data Lake Documentation. 
+The ETL process will be done by Trifacta for this data set with standard ETL procedure in the [Data Lake Documentation.](https://github.com/BayAreaMetro/eps-projects/tree/master/data-lake/documentations) 
 
 # Experiment Phase
 We have built two work flow for experiment phase in order to create table, engineering the data type and push to Redshift. There are two work flow created for this purpose:<br>
