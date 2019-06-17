@@ -10,7 +10,8 @@ To run the script, input the year (such as 2018) and month (January = 1, Februar
 
 
 
-The script will upload the month's data to the `mtc-redshift-upload` s3 bucket, then copy that into staging. It drops the monthly tables created in the process.  As a backup, it does not drop the gzip file in the s3 bucket.
+The script will upload the month's data to the `mtc-redshift-upload` s3 bucket, then copy that into staging. It drops the monthly tables created in the process.  The script does not delete the gzip file from the s3 bucket, so that the data that is appended can still be accessed.
+
 
 It will append a the `admin.data_logs table` with : 
 
@@ -20,7 +21,7 @@ It will append a the `admin.data_logs table` with :
 
 * count of the one month's rows
 
-* database name
+* name of database that data is being appended to (for this script, ‘staging’)
 
 * desciption of the load
 
@@ -28,11 +29,11 @@ It will append a the `admin.data_logs table` with :
 
 * number of columns
 
-* the platform (python)
+* the platform used (for this script, this field would be ‘python’)
 
 * schema name
 
-* source
+* source of the data that is being uploaded (for this script, ‘lake’) 
 
 * table name
 
