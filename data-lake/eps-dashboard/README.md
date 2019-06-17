@@ -1,12 +1,10 @@
 # EPS Dashboard
  
-These queries are represetative of metrics in monthly Clipper and FasTrak reports shared with top excutives.  
+These queries are representative of metrics in monthly Clipper and FasTrak reports shared with top MTC executives.  The primary audience would be the product managers and people in leadership, such as the board of directors.
 
-The primaray audience would be the product mangers and then key stake holders.
+These are queries from the Data Lake, and the numbers will not match the numbers in Crystal Reports. We learned by talking with various member of the eps team that these numbers will never match up. When possible, we've included how off different metrics were compared to official reports.  For example, the amount of revenue per month our query calculates is consistently below that reported in official reports.
 
-These are queries from the Data Lake, and the numbers will not match the numbers in Crystal Reports.  We learned by talking with various member of the eps team that these numbers will never match up.  When possible, we've included how off different metrics were.
-
-We also created a dimension table to improve query performance in dashboards, that sql is included as well.
+We also created a dimension table to improve query performance in dashboards, that sql is included as well. 
 
 ## Prototype Dashboards
 
