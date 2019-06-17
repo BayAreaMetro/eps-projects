@@ -39,7 +39,7 @@ Optional:
 13. Holiday(varchar, like "Thanksgiving Day")
 14. Season(varchar, like "Summer")
 <br>
-** When joining the date table to an existing data set (like sfo_fare_transactions) a date key column will need to be created in table being joined to the Date Table in the format YYYY-MM-DD. Views can also be created of data sets joined with the Date Table.**
+** When joining the date table to an existing data set (like sfo_fare_transactions) a date key column will need to be created in table being joined to the Date Table in the format YYYY-MM-DD. Views can also be created of data sets joined with the Date Table. **
 <br><br>
 The Date table does not limited to be used for Clipper transaction table but also other tables like Fastrak transaction table. 
 <br><br>
