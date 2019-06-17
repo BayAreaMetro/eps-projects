@@ -39,7 +39,7 @@ Optional:
 13. Holiday(varchar, like "Thanksgiving Day")
 14. Season(varchar, like "Summer")
 <br>
-** When querying a date key column will need to be created in table being joined to the Date Table in the format YYYY-MM-DD. **
+** When joining the date table to an existing data set (like sfo_fare_transactions) a date key column will need to be created in table being joined to the Date Table in the format YYYY-MM-DD. Views can also be created of data sets joined with the Date Table.**
 <br><br>
 The Date table does not limited to be used for Clipper transaction table but also other tables like Fastrak transaction table. 
 <br><br>
@@ -59,4 +59,4 @@ Optional:
 generationtime column in Clipper transaction table is in UTC time, but the time in Time Table time entries is based on local California time PST, and adjusted for day light saving adjustment. It is the best to convert the time to PST because all the data entries are gathered in California and we do not have to worry about time inconsistent.
 <br><br>
 
-Another advantage of having Date and Time schema is that if in the future we decide to add new columns related to date or time, such as isRushHour, we can create new columns in Date and Time schema without making any adjustment on the transaction tables.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Another advantage of having Date and Time schema is that if in the future we decide to add new columns related to date or time, such as isRushHour, we can create new columns in Date and Time schema without making any adjustment on the transaction tables.
