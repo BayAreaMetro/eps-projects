@@ -109,13 +109,13 @@ that two work flows are to wrangle data from S3 to Staging and Staging to Lake.Â
 <br>
 
 # The Validation Report
-The validation report is built for data stewards to verify the data before pushing into lake. The dashboard is queried from the Staging database. The below link is the validation report for clipper_reporting in Staging. Once the data is approved, data engineers will manually push it into Lake.
-<a href="https://datastudio.google.com/u/0/reporting/1j4M2oTkqDEQCU41Jt9x8dVniS8DB8OMu/page/FLqo">Link here</a>
+The validation report is built for data stewards to verify the data before pushing into lake. The dashboard is queried from the Staging database. The below link is the validation report for clipper_reporting in Staging. Once the data is approved, data engineers will manually push it into Lake.<br>
+<a href="https://datastudio.google.com/u/0/reporting/1j4M2oTkqDEQCU41Jt9x8dVniS8DB8OMu/page/FLqo">Link here</a><br>
 Kearey, Jacques, and Quinn have the authority to edit, they may allow other users to edit.
 
-
-These work flow are built for production use.
-Automated work flow to ingest Clipper and Fastrak reporting data from S3 to Staging:
-<a href="https://mtc.trifacta.net/flows/146">Link here</a>
-Manual work flow to wrangle Clipper and Fastrak reporting data from Staging to Lake:
-<a href="https://mtc.trifacta.net/flows/147">Link here</a>
+# Pipeline Link
+These work flow are built for production use.<br>
+Automated work flow to ingest Clipper and Fastrak reporting data from S3 to Staging:<br>
+<a href="https://mtc.trifacta.net/flows/146">Link here</a><br>
+Manual work flow to wrangle Clipper and Fastrak reporting data from Staging to Lake:<br>
+<a href="https://mtc.trifacta.net/flows/147">Link here</a><br>
