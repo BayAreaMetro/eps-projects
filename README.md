@@ -37,7 +37,7 @@ This repo contains documentation of the work done for the MTC-USF practicum duri
 
 * [Data Lake](/data-lake)
 * [Clipper Ridership Prediction Models](/clipper-models)
-* [EPS Dashboard](/data-lake/eps-dashboard)
+* [EPS Dashboard](/eps-dashboard)
 
 ## Student Findings FY 18/19
 
