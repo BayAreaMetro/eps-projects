@@ -2,7 +2,7 @@
 
 The dashboard is requested by Lysa Hale. The goal is to build a dashboard to replace the PDF report sent to the board of members. Jacques is assigned to build the prototype with Power BI.
 
-![Screenshot](image/bi_coverpage.png)
+![Screenshot](images/bi_coverpage.png)
 Figure 1
 
 ## Persona
