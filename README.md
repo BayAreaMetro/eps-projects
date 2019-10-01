@@ -15,7 +15,7 @@
 
 [Bus Report Dashboard](/Bus-Report-Dashboard)
 
-[Clipper Update Automation Project](/clipper-update-automation)
+[Clipper Update Automation Project](/Clipper-Update-Automation)
 
 ## Miscellaneous Projects
 
