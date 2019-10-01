@@ -3,9 +3,9 @@
 
 ## Table of Contents
 
-* [Clipper Operations Team Projects](#clipper-operations-team-projects)
-* [Miscellaneous Projects](#misc-projects)
-* [USF Data Science Practicum](#USF_Data_science_practicum)
+* [Clipper Operations Team Projects](#clipper---operations-team-projects)
+* [Miscellaneous Projects](#miscellaneous-projects)
+* [USF Data Science Practicum](#USF-Data-Science-Practicum)
 
 
 
