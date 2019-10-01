@@ -15,6 +15,8 @@
 
 [Bus Report Dashboard](/Bus-Report-Dashboard)
 
+[Clipper Update Automation Project](/clipper-update-automation)
+
 ## Miscellaneous Projects
 
 * [Transbay Analysis](/transbay-analysis) (Author: Yeeling Tse)
