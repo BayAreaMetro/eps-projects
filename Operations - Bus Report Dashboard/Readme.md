@@ -1,6 +1,6 @@
--- Draft --
-
 # Bus Report Dashboard
+
+##### by Sarah Doggett
 
 Clipper Operations lacked a way to easily spot and investigate issues related to bus device connectivity and status. Clipper worked with Cubic to develop a Bus Report that would provide detailed insight into the operational status of Clipper devices on the bus system. 
 
