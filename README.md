@@ -13,7 +13,7 @@
 
 ## Clipper Operations Team Projects
 
-[Bus Report Dashboard](/Operations-Bus-Report-Dashboard)
+[Bus Report Dashboard](/Bus-Report-Dashboard)
 
 ## Miscellaneous Projects
 
