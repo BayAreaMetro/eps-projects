@@ -162,6 +162,15 @@ if __name__ == "__main__":
 
 
 
+## How to get access to Cubic SFTP server
+
+1. Aquire SFTP Client (aka Cygwin OpenSSH)
+2. Create RSA key pair by entering this command into Cygwin (ssh-keygen -t rsa)
+3. Provide id_rsa.pub file to Cubic
+4. Get Cubic to add IP address to their firewall
+
+
+
 ## Tags
 
 #operations #tableau #bus_report #automation
