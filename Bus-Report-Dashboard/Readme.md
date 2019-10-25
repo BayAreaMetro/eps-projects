@@ -18,7 +18,7 @@ CID periodically sends passenger clipper card tag data (UD) to the DC and the DC
 
 Tableau Online Dashboard:
 
-https://10ay.online.tableau.com/#/site/metropolitantransportationcommission/views/BusReportDashboard/KPIs?:iid=2
+https://10ay.online.tableau.com/#/site/metropolitantransportationcommission/workbooks/629306?:origin=card_share_link
 
 ## Data Source
 
